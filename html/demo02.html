@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../js/doT.js"></script>
+    <style type="text/css">
+    #show h3{
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="show">
+        <script id="template" type="text/template">
+        {{ if(data.length > 0 ){}}
+            {{ for( var i = 0 ; i < data.length; i++){ }}
+            
+            <h3>{{= data[i].name}}</h3>
+            <h3>{{= data[i].sex}}</h3>
+            <hr>
+         {{}}}
+
+             {{} else { }}
+                <h1>no date</h1>
+            {{}}}
+        </script>
+    </div>
+    <script type="text/javascript">
+     var data = [{ name:"zhijun",sex:"男"},{name:"wangjin",sex:"女"}];
+     var template = document.getElementById("template").innerHTML;
+     document.getElementById("show").innerHTML = doT.template(template)(data);
+
+    </script>
+</body>
+   
+</html>

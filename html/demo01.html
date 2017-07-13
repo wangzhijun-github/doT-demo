@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../js/doT.js"></script>
+</head>
+
+<body>
+    <div id="show">
+        <script id="template" type="text/template">
+            <h3>{{= data.name}}</h3>
+            <h3>{{= data.sex}}</h3>
+        </script>
+    </div>
+    <script type="text/javascript">
+     var data = { name:"zhijun",sex:"男"};
+     var template = document.getElementById("template").innerHTML;
+     document.getElementById("show").innerHTML = doT.template(template)(data);
+
+    </script>
+</body>
+   
+</html>
