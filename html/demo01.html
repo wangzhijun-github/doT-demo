@@ -18,6 +18,8 @@
         var template = document.getElementById("template").innerHTML;
         if("develop" == "develop"){
             console.log("add develop judge");
+        }else{
+            console.log("master fail");
         }
         document.getElementById("show").innerHTML = doT.template(template)(data);
        </script>
