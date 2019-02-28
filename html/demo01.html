@@ -14,6 +14,9 @@
         </script>
     </div>
     <script type="text/javascript">
+        if("develop" == "develop"){
+            console.log("add develop judge");
+        }
         var data = { name:"repeat repeat repeat develop edit text",sex:"男"};
         var template = document.getElementById("develop").innerHTML;
         document.getElementById("show").innerHTML = doT.template(template)(data);
