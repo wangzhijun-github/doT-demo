@@ -14,10 +14,11 @@
         </script>
     </div>
     <script type="text/javascript">
+        if("master" == "master"){
+            console.log(" add master judge");
+        }
         var data = "if once again edit master text";
         var template = document.getElementById("template").innerHTML;
-        var data = { name:"repeat repeat repeat develop edit text",sex:"男"};
-        var template = document.getElementById("develop").innerHTML;
         document.getElementById("show").innerHTML = doT.template(template)(data);
        </script>
 </body>
